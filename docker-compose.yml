@@ -1,0 +1,9 @@
+version: '2'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/code
+    ports:
+      - "9000:9000"
+    command: python manage.py runserver 0.0.0.0:9000
