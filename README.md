@@ -1,6 +1,5 @@
 # Parking slots project
-This Django project is intented to priorityze the parking lots. This project is using docker to make it easrier to run.
-This project uses an REST API and exposes one endpoint.
+This Django project is intented to priorityze the parking lots. This project runs using docker and has a REST API with one endpoint.
 
 ## Settings
 In `settings.py` you can define:
@@ -29,7 +28,7 @@ Note: This list is going to be use to validate the input structure to get the pa
 
 ## Getting the schedule
 ### User structure
-```
+```json
 {   
     "name": "user1",
     "distance": 8,
@@ -42,7 +41,7 @@ Note: This list is going to be use to validate the input structure to get the pa
 ```
 ### Example
 #### Request
-```
+```json
 POST "http://localhost:9000/parking/"
 payload = [
     {   
@@ -76,7 +75,7 @@ payload = [
 ]
 ```
 #### Response
-```
+```json
 [
     {
         "day": "monday",    <--- day of week
